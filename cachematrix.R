@@ -1,3 +1,5 @@
+#The first function will create a list which contains the getter and setter of square matrices and it's inverse
+
 makeCacheMatrixMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -10,7 +12,8 @@ makeCacheMatrixMatrix <- function(x = matrix()) {
   list(set = set, get =get,setsolve = setsolve,getsolve = getsolve)
 }
 
-
+# The second function checks if the inverse of an input already is in the cache, and if not, it calculates the inverse.
+ 
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
   if(!is.null(m)) {
